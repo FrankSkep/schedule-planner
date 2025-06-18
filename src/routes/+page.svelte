@@ -67,9 +67,20 @@
 </script>
 
 <main class="min-h-screen bg-gray-50 p-6 text-gray-800">
-	<div class="mx-auto max-w-4xl">
-		<h1 class="mb-6 text-center text-3xl font-bold">Planificador de Horario Académico</h1>
-
+	<div class="relative mx-auto max-w-7xl">
+		<div class="mb-6 flex items-center justify-between">
+			<h1 class="flex-1 text-center text-3xl font-bold">Planificador de Horario Académico</h1>
+			<a
+				href="https://github.com/FrankSkep/schedule-planner"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="ml-4 inline-flex items-center gap-2 rounded bg-gray-800 px-4 py-2 text-white transition hover:bg-gray-700"
+				aria-label="Ver en GitHub"
+			>
+				<i class="fab fa-github fa-lg"></i>
+				GitHub
+			</a>
+		</div>
 		<SubjectForm
 			subject={current}
 			{editIndex}
@@ -85,11 +96,8 @@
 			<p class="mb-4 font-semibold text-red-600">{message}</p>
 		{/if}
 
-		<ScheduleTable {subjects} />
-
-		<SubjectList
+		<ScheduleTable
 			{subjects}
-			editingIndex={editIndex}
 			on:edit={(e) => handleEdit(e.detail)}
 			on:delete={(e) => handleDelete(e.detail)}
 		/>
