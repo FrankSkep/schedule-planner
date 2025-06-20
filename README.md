@@ -10,7 +10,9 @@ A simple web app to manage and visualize your academic schedule, built with **Sv
 - Edit and delete subjects
 - Custom time ranges (not fixed to morning)
 - Data persistence using `localStorage`
-- Unique background color per subject
+- **Export your schedule as JSON**
+- **Import a schedule from a JSON file**
+- **Export your schedule as a PNG image**
 
 ## 🛠️ Setup
 
@@ -19,6 +21,6 @@ git clone https://github.com/FrankSkep/schedule-planner.git
 cd schedule-planner
 npm install
 npm run dev
-````
+```
 
-Open `http://localhost:5173` in your browser.
+Open `http://localhost:5173` in
